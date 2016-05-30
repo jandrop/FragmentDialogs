@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
+import es.atrapandocucarachas.fragmentdialogs.dialogs.AlertDialogFragment;
 import es.atrapandocucarachas.fragmentdialogs.dialogs.DatePickerFragment;
 
 public class MainActivity extends AppCompatActivity{
@@ -29,6 +30,21 @@ public class MainActivity extends AppCompatActivity{
                         .show();
             }
         });
+    }
 
+    public void alertDialog(View view) {
+        AlertDialogFragment dialog = AlertDialogFragment.newInstance(R.string.alert_dialog_title, R.string.alert_dialog_message);
+        dialog.show(getSupportFragmentManager(),"dialogAlert");
+        dialog.addListener(new AlertDialogFragment.OnClickListener() {
+            @Override
+            public void onPositiveClick() {
+                Toast.makeText(MainActivity.this, "Positive Click", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNegativeClick() {
+                Toast.makeText(MainActivity.this, "Negative Click", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fragment Dialogs</string>
+
+    <!-- ALERT DIALOG -->
+    <string name="alert_dialog_ok">Agree</string>
+    <string name="alert_dialog_cancel">Disagree</string>
+    <string name="alert_dialog_title">Use Google\'s location service?</string>
+    <string name="alert_dialog_message">Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</string>
 </resources>
